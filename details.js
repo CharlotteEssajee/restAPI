@@ -19,10 +19,10 @@ idContainer.innerHTML = "";
 async function getId() {
   try {
     const response = await fetch(corsFix);
-    const details = await response.json();
+    const product = await response.json();
 
-    console.log(details);
-    createHtml(details);
+    console.log(product);
+    createHtml(product);
   } catch (error) {
     console.log(error);
     detailContainer.innerHTML = error;
@@ -31,10 +31,11 @@ async function getId() {
 
 getId();
 
-function createHtml(details) {
+function createHtml(product) {
   detailContainer.innerHTML = `<div class ="cardDetail">
-  <img src="${product.images[0].src}" alt="${product.name}">
-  <h2>${product.name}</h2>
-  <p>Price: ${product.prices.price}£</p>
+                                <img src="${product.images[0].src}" alt="${product.name}">
+                                <h2>${product.name}</h2>
+                                <p>${product.description}</p>
+                                <p>Price: ${product.prices.price}£</p>
                               </div>`;
 }
