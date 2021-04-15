@@ -1,0 +1,105 @@
+* {
+  color: rgb(77, 77, 102);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(169, 169, 197);
+}
+
+li {
+  float: left;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(77, 77, 102);
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product {
+  padding: 30px 10px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 2%;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+p {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* spinning loader */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid rgb(78, 62, 62);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+/* details */
+.cardDetail {
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 500px;
+  height: 200px;
+  background: white;
+  box-shadow: 0 1.4rem 8rem rgb(0 0 0 / 20%);
+  border-radius: 1rem;
+  color: inherit;
+  text-decoration: inherit;
+  margin: 0 auto;
+}
+
+.cardDetail img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 3rem;
+  border-radius: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
